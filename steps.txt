@@ -1,0 +1,9 @@
+geth --datadir=./sdn init ./sdn/genesis.json
+
+geth --datadir=./sdn --rpc --rpcaddr "0.0.0.0" --rpccorsdomain "*"
+
+geth attach ipc:\\.\pipe\geth.ipc
+
+miner.start(2);
+miner.stop();
+
